@@ -1,19 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
+import { GET_RECIPE } from '../actions/types'
 
 const Results = props => {
   
    const items = props.data
       ? (props.data.map(result => {
           return (
-            <li>
+            <li onClick={() => props.getRecipe(result.recipe_id)} key={result.recipe_id}>
               <a className='results__link results__link--active' href='#23456'>
                 <figure className='results__fig'>
-                  <img src={result.img} alt='test' />
+                  <img src={result.image_url} alt='test' />
                 </figure>
-                <div className='result__data'>
-                  <h4 className='result__name'>{result.title}</h4>
-                  <p className='resuts__author'>{result.publisher}</p>
+                <div className='results__data'>
+                  <h4 className='results__name'>{result.title}</h4>
+                  <p className='results__author'>{result.publisher}</p>
                 </div>
               </a>
             </li>
@@ -27,11 +29,18 @@ const Results = props => {
     </div>
   );
 };
-
+const mapDispatchToProps =  dispatch => {
+  return {
+    getRecipe: async(id) => {
+      const res = await axios(`https://forkify-api.herokuapp.com/api/get?rId=${id}`);
+      dispatch({ type: GET_RECIPE, payload: res.data.recipe})
+    }
+  };
+};
 const mapStateToProps = state => {
   return {
      data: state.data
   };
 };
 
-export default connect(mapStateToProps)(Results);
+export default connect(mapStateToProps, mapDispatchToProps)(Results);

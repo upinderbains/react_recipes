@@ -9,6 +9,7 @@ const Search = props => {
   const onSubmit = e => {
     e.preventDefault();
     props.searchRecipe(search);
+    setSearch('')
   };
 
   return (
