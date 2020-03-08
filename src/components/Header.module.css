@@ -1,0 +1,10 @@
+.header {
+  grid-area: head;
+  height: 25vh;
+  width: 100%;
+  background-image: url(./chopping.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

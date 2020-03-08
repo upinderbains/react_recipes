@@ -4,7 +4,8 @@ import './App.css';
 import Header from './components/Header';
 import Results from './components/Results';
 import Recipe from './components/Recipe';
-
+import ShoppingList from './components/ShoppingList';
+import Likes from './components/Likes';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Header />
       <Results />
       <Recipe />
-      
+      <ShoppingList />
     </div>
   );
 }

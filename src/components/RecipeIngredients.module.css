@@ -1,0 +1,39 @@
+.recipe__ingredients {
+    padding: 4rem 5rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    background-color: #F2EFEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.recipe__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2.5rem;
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.recipe__item {
+    display: flex;
+}
+
+.recipe__count {
+    margin-right: .5rem;
+    flex: 0 0 auto;
+}
+.recipe__ingredient {
+
+}
+
+.recipe__unit {
+
+}
+
+.recipe__button {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: currentColor;
+}

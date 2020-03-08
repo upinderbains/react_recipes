@@ -1,0 +1,124 @@
+.recipe {
+  grid-area: recipe;
+  background-color: rgba(250, 246, 246, 0.664);
+  border-top: 1px solid #fff;
+}
+
+.recipe__fig {
+  margin: auto;
+  padding: 3rem 5rem;
+}
+
+.recipe__img {
+  width: 100%;
+  max-width: 700px;
+  max-height: 300px;
+  border-radius: 2px;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recipe__title {
+  font-weight: 700;
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  color: rgb(38, 77, 121);
+  line-height: 1.95;
+  text-align: center;
+}
+
+.recipe__details {
+  display: flex;
+  align-items: center;
+  padding: 8rem 3rem 3rem 3rem;
+}
+
+.recipe__info {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.recipe__buttons {
+  display: flex;
+  margin-left: 1.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.4s;
+}
+.recipe:hover .recipe__buttons {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.recipe__ingredients {
+  padding: 4rem 5rem;
+  font-size: 2rem;
+  line-height: 1.4;
+  background-color: #f2efee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipe__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2.5rem;
+  list-style: none;
+  margin-bottom: 3rem;
+}
+.recipe__love {
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  height: 4.5rem;
+  width: 4.5rem;
+  margin-left: auto;
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .recipe__love:hover {
+    transform: scale(1.07); }
+  .recipe__love:focus {
+    outline: none; }
+    
+.recipe__directions {
+  padding: 4rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipe__heading {
+  font-size: 2rem;
+  color: rgb(38, 77, 121);
+}
+.recipe__dirtext {
+  font-size: 2rem;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 3rem;
+  color: rgb(38, 77, 121);
+}
+.recipe__by {
+  font-weight: 700;
+}
+.recipe__btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(38, 77, 121);
+}
+.recipe__btn span{
+  margin: 1rem;
+}
+.recipe__btn:hover{
+  color: rgb(12, 32, 54);
+}
